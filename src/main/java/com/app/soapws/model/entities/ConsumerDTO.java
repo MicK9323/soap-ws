@@ -1,4 +1,4 @@
-package com.app.soapws.model;
+package com.app.soapws.model.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,8 +9,8 @@ public class ConsumerDTO implements Serializable {
 
     @Id
     @Column(name = "consumer_id")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
-    @SequenceGenerator(name = "sequence", sequenceName = "consumer_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "consumer_sequence")
+    @SequenceGenerator(name = "consumer_sequence", sequenceName = "consumer_seq")
     private int id;
 
     @Column(name = "consumer_dni")

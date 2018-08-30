@@ -1,4 +1,4 @@
-package com.app.soapws.model;
+package com.app.soapws.model.entities;
 
 import org.hibernate.annotations.LazyToOne;
 import org.hibernate.annotations.LazyToOneOption;
@@ -13,8 +13,8 @@ public class RegionDTO implements Serializable {
 
     @Id
     @Column(name = "region_id")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
-    @SequenceGenerator(name = "sequence", sequenceName = "region_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "region_sequence")
+    @SequenceGenerator(name = "region_sequence", sequenceName = "region_seq")
     private int id;
 
     @Column(name = "region_desc")

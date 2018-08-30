@@ -1,4 +1,4 @@
-package com.app.soapws.model;
+package com.app.soapws.model.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,8 +9,8 @@ public class CountryDTO implements Serializable {
 
     @Id
     @Column(name = "country_id")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
-    @SequenceGenerator(name = "sequence", sequenceName = "country_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "country_sequence")
+    @SequenceGenerator(name = "country_sequence", sequenceName = "country_seq")
     private int id;
 
     @Column(name = "country_desc")

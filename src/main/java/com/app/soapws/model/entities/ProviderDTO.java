@@ -1,4 +1,4 @@
-package com.app.soapws.model;
+package com.app.soapws.model.entities;
 
 import org.hibernate.annotations.LazyToOne;
 import org.hibernate.annotations.LazyToOneOption;
@@ -13,8 +13,8 @@ public class ProviderDTO implements Serializable {
 
     @Id
     @Column(name = "provider_id")
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
-    @SequenceGenerator(name = "sequence", sequenceName = "provider_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "provider_sequence")
+    @SequenceGenerator(name = "provider_sequence", sequenceName = "provider_seq")
     private int id;
 
     @Column(name = "provider_desc")
