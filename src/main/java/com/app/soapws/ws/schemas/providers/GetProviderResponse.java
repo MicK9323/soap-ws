@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2018.08.30 a las 12:36:57 AM COT 
+// Generado el: 2018.08.30 a las 09:36:16 PM COT 
 //
 
 
@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -27,6 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="providers" type="{http://soapws.app.com/ws/schemas/providers}provider" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="new_provider_status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,12 +39,15 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "providers"
+    "providers",
+    "newProviderStatus"
 })
 @XmlRootElement(name = "getProviderResponse")
 public class GetProviderResponse {
 
     protected List<Provider> providers;
+    @XmlElement(name = "new_provider_status")
+    protected String newProviderStatus;
 
     /**
      * Gets the value of the providers property.
@@ -71,6 +76,30 @@ public class GetProviderResponse {
             providers = new ArrayList<Provider>();
         }
         return this.providers;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad newProviderStatus.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNewProviderStatus() {
+        return newProviderStatus;
+    }
+
+    /**
+     * Define el valor de la propiedad newProviderStatus.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNewProviderStatus(String value) {
+        this.newProviderStatus = value;
     }
 
 }

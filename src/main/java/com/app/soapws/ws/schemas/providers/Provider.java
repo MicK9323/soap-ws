@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2018.08.30 a las 12:36:57 AM COT 
+// Generado el: 2018.08.30 a las 09:36:16 PM COT 
 //
 
 
@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="country" type="{http://soapws.app.com/ws/schemas/providers}country"/>
+ *         &lt;element name="country_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="region_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,15 +40,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "provider", propOrder = {
     "id",
     "description",
-    "country"
+    "countryName",
+    "regionName"
 })
 public class Provider {
 
     protected int id;
     @XmlElement(required = true)
     protected String description;
-    @XmlElement(required = true)
-    protected Country country;
+    @XmlElement(name = "country_name", required = true)
+    protected String countryName;
+    @XmlElement(name = "region_name", required = true)
+    protected String regionName;
 
     /**
      * Obtiene el valor de la propiedad id.
@@ -90,27 +94,51 @@ public class Provider {
     }
 
     /**
-     * Obtiene el valor de la propiedad country.
+     * Obtiene el valor de la propiedad countryName.
      * 
      * @return
      *     possible object is
-     *     {@link Country }
+     *     {@link String }
      *     
      */
-    public Country getCountry() {
-        return country;
+    public String getCountryName() {
+        return countryName;
     }
 
     /**
-     * Define el valor de la propiedad country.
+     * Define el valor de la propiedad countryName.
      * 
      * @param value
      *     allowed object is
-     *     {@link Country }
+     *     {@link String }
      *     
      */
-    public void setCountry(Country value) {
-        this.country = value;
+    public void setCountryName(String value) {
+        this.countryName = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad regionName.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRegionName() {
+        return regionName;
+    }
+
+    /**
+     * Define el valor de la propiedad regionName.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRegionName(String value) {
+        this.regionName = value;
     }
 
 }

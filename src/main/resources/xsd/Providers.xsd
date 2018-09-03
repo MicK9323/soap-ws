@@ -6,7 +6,10 @@
     <xs:element name="getProviderRequest">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="option" type="xs:string"/>
                 <xs:element name="id" type="xs:int" minOccurs="0"/>
+                <xs:element name="provider_name" type="xs:string" minOccurs="0"/>
+                <xs:element name="country_id" type="xs:int" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -15,6 +18,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="providers" type="tns:provider" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="new_provider_status" type="xs:string" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -23,23 +27,8 @@
         <xs:sequence>
             <xs:element name="id" type="xs:int"/>
             <xs:element name="description" type="xs:string"/>
-            <xs:element name="country" type="tns:country"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="country">
-        <xs:sequence>
-            <xs:element name="id" type="xs:int"/>
-            <xs:element name="description" type="xs:string"/>
-            <xs:element name="cod_number" type="xs:string"/>
-            <xs:element name="region" type="tns:region"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="region">
-        <xs:sequence>
-            <xs:element name="id" type="xs:int"/>
-            <xs:element name="description" type="xs:string"/>
+            <xs:element name="country_name" type="xs:string"/>
+            <xs:element name="region_name" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 

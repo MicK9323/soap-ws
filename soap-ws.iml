@@ -105,6 +105,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.0.8.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.0.8.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.5.1" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle:ojdbc14:10.2.0.4.0" level="project" />
+    <orderEntry type="library" name="Maven: oracle:ojdbc6:11.2.0.3" level="project" />
+    <orderEntry type="library" name="Maven: wsdl4j:wsdl4j:1.6.2" level="project" />
   </component>
 </module>

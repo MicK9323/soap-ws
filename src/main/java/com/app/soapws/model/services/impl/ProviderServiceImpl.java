@@ -25,6 +25,11 @@ public class ProviderServiceImpl implements IProviderService {
     }
 
     @Override
+    public void saveProvider(ProviderDTO provider) {
+        providerRepository.save(provider);
+    }
+
+    @Override
     public ProviderDTO findProvider(int id) {
         return providerRepository.findById(id).orElse(null);
     }

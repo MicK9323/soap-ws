@@ -14,7 +14,7 @@ public class ProviderDTO implements Serializable {
     @Id
     @Column(name = "provider_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "provider_sequence")
-    @SequenceGenerator(name = "provider_sequence", sequenceName = "provider_seq")
+    @SequenceGenerator(name = "provider_sequence", sequenceName = "provider_seq", allocationSize = 1)
     private int id;
 
     @Column(name = "provider_desc")
@@ -57,6 +57,12 @@ public class ProviderDTO implements Serializable {
     }
 
     public void setCountry(CountryDTO country) {
+        this.country = country;
+    }
+
+    public void setCountryId(int countryId) {
+        CountryDTO country = new CountryDTO();
+        country.setId(countryId);
         this.country = country;
     }
 }

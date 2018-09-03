@@ -8,5 +8,6 @@ public interface IProviderService {
 
     List<ProviderDTO> listAllProviders();
     ProviderDTO findProvider(int id);
+    void saveProvider(ProviderDTO provider);
 
 }
